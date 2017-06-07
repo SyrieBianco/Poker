@@ -1,5 +1,7 @@
 class Card
 
+attr_reader :type, :value, :suit
+
   VALUES = {
     'Ace' => 14,
     'King' => 13,
@@ -13,8 +15,7 @@ class Card
     '5' => 5,
     '4' => 4,
     '3' => 3,
-    '2' => 2,
-    '1' => 1
+    '2' => 2
   }
 
   def initialize(type, suit)
@@ -22,7 +23,5 @@ class Card
     @value = VALUES[type]
     @suit = suit
   end
-
-
 
 end
