@@ -19,7 +19,7 @@ class Card
 
   def initialize(type, suit)
     @type = type
-    @value =
+    @value = VALUES[type]
     @suit = suit
   end
 
