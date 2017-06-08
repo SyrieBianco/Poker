@@ -19,5 +19,5 @@ describe Player do
   #     player.get_discard(deck)
   #     expect(player.hand).to eq(["card3", "card4", "card5", "card6", "card7"])
   #   end
-  end
+  # end
 end
