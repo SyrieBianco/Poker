@@ -2,7 +2,8 @@ require 'rspec'
 require 'player'
 
 describe Player do
-  let(:hand) {double ('hand')}
+  let(:deck) { double(stack: ["card6", "card7"])}
+  let(:hand) {["card1", "card2", "card3", "card4", "card5"]}
   subject(:player) {Player.new(hand)}
 
   describe '#initialize' do
@@ -12,6 +13,10 @@ describe Player do
     end
   end
 
-
-
+  describe '#discard' do
+    it 'discards the cards at the input indices' do
+      player.get_discard(deck)
+      expect(player.hand).to eq(["card3", "card4", "card5", "card6", "card7"])
+    end
+  end
 end
