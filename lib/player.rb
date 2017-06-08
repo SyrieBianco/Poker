@@ -2,11 +2,12 @@ require_relative 'hand'
 
 class Player
 
-  attr_accessor :hand, :pot, :folded
+  attr_accessor :name, :hand, :pot, :bet, :folded
 
-  def initialize(hand, pot = 50)
-    @hand = hand
-    @pot = pot
+  def initialize(name)
+    @name = name
+    @hand = []
+    @pot = 50
     @bet = 0
     @folded = false
   end

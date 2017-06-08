@@ -17,6 +17,12 @@ class Hand
     @cards = cards
   end
 
+
+  def render
+    puts map{ |card| card.type}
+  end
+
+
   def evaluate
     if of_a_kind_hands
       of_a_kind_hands
